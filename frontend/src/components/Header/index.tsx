@@ -1,4 +1,3 @@
-import { useAuth0, User } from "@auth0/auth0-react";
 import { UserStatus } from "./UserStatus";
 
 export function Header() {

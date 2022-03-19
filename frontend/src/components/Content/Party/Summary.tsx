@@ -2,13 +2,10 @@ import { Party } from "../../models/Party";
 
 export function Summary({ party }: { party: Party }) {
   return (
-    <div className="party" key={party.id}>
+    <div className="p-3 mr-2.5 bg-box-background text-box-background-text basis-1/4 rounded-lg" key={party.id}>
       <header>
-        <h2>{party.title}</h2>
+        <h2 className="text-lg font-semibold">{party.title}</h2>
       </header>
-      <section>
-        {party.description}
-      </section>
       <footer>
         {party.startedAt}
       </footer>

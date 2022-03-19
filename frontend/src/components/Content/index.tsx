@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import { Party } from '../models/Party';
+import { Party } from "../models/Party";
 import { GET_PARTIES_SUMMARY } from "../models/queries";
 import { Summary } from "./Party/Summary";
 
@@ -16,16 +16,17 @@ export function Content() {
   }
 
   return (
-    <>
-    {data.parties.map((party) => ( 
-      <Summary party={party} key={party.id} />
-    ))}
-    </>
-  )
+    <div className="md:container md:mx-auto flex flex-row">
+      {data.parties.map((party) => (
+        <Summary party={party} key={party.id} />
+      ))}
+    </div>
+  );
 }
 
 export function useContent() {
-  const { data, loading, error } = useQuery<{ parties: Party[] }>(GET_PARTIES_SUMMARY);
+  const { data, loading, error } =
+    useQuery<{ parties: Party[] }>(GET_PARTIES_SUMMARY);
 
   return { data, loading, error };
 }

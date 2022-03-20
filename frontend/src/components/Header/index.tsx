@@ -1,3 +1,4 @@
+import React from "react";
 import { UserStatus } from "./UserStatus";
 
 export function Header() {

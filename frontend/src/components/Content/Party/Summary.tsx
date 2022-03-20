@@ -1,3 +1,4 @@
+import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_PARTIES_SUMMARY } from "../../models/queries";
 import { Party } from "../../models/Party";

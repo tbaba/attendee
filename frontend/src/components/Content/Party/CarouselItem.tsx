@@ -1,3 +1,4 @@
+import React from 'react';
 import { Party } from "../../models/Party";
 
 export function CarouselItem({ party }: { party: Party }) {

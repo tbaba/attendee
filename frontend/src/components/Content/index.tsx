@@ -1,3 +1,4 @@
+import React from "react";
 import { useQuery } from "@apollo/client";
 import { Party } from "../models/Party";
 import { GET_PARTIES_CAROUSEL_ITEM } from "../models/queries";

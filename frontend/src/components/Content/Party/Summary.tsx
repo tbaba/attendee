@@ -16,7 +16,7 @@ export function Summary() {
   const { parties } = data;
 
   return (
-    <div className="party-summaries mt-5 container md:mx-auto">
+    <div className="party-summaries mt-5 container  md:mx-auto">
       <div className="border-b mb-2">
         <h2 className="text-xl font-semibold">最新のDJイベント一覧</h2>
       </div>
@@ -29,11 +29,18 @@ export function Summary() {
 
 function SummaryItem({ party }: { party: Party }) {
   return (
-    <article className="rounded bg-box-background-thin mb-3 p-3">
-      <header>
-        <h1 className="text-lg">{party.title}</h1>
-      </header>
-      <section>{party.description}</section>
+    <article className="rounded bg-box-background-thin mb-3 p-3 mx-auto w-8/12">
+      <div className="flex justify-between">
+        <div>
+          <header>
+            <h1 className="text-lg">{party.title}</h1>
+          </header>
+          <section>{party.description}</section>
+        </div>
+        <div>
+          <img src="picture" className="h-full" />
+        </div>
+      </div>
     </article>
   );
 }

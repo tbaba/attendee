@@ -2,6 +2,7 @@ import { ApolloProvider } from "@apollo/client";
 import { Auth0Provider } from "@auth0/auth0-react";
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import App, { client } from "./App";
 import { auth0ClientId, auth0Domain } from "./authSettings";
 import "./index.css";
@@ -14,9 +15,11 @@ ReactDOM.render(
     redirectUri={window.location.origin}
   >
     <ApolloProvider client={client}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <BrowserRouter>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </BrowserRouter>
     </ApolloProvider>
   </Auth0Provider>,
   document.getElementById("root")
